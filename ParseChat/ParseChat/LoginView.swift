@@ -35,7 +35,19 @@ class LoginView: UIViewController {
     }
     @IBAction func facebookLoginClicked(sender: AnyObject) {
         self.indicator.startAnimating()
-        LoginService.sharedInstance.loginWithFacebook(self)
+        LoginService.sharedInstance.loginWithFacebook{
+            response in
+            if(response == true){
+                let mainView:MainView = self.storyboard!.instantiateViewControllerWithIdentifier("MainView") as! MainView
+                self.presentViewController(mainView, animated: true, completion: nil)
+            }else{
+                let alertController = UIAlertController(title: "Alert", message:
+                    "Failed! Please log in again!", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
+            self.indicator.stopAnimating()
+        }
     }
     
 }

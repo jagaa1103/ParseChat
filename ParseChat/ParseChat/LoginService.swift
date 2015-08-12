@@ -31,7 +31,7 @@ class LoginService {
     }
     
     
-    func loginWithFacebook(loginView: LoginView) {
+    func loginWithFacebook(completionHandler:(res:Bool)->()){
         var flag: Bool = false
         PFFacebookUtils.logInInBackgroundWithReadPermissions(["email", "public_profile"], block:{
             (user: PFUser?, error: NSError?) -> Void in
@@ -44,16 +44,10 @@ class LoginService {
                 } else {
                     println("User logged in through Facebook!")
                 }
-                println(user)
-                println(FBSDKAccessToken.currentAccessToken().tokenString)
-                let mainView:MainView = loginView.storyboard!.instantiateViewControllerWithIdentifier("MainView") as! MainView
-                    loginView.presentViewController(mainView, animated: true, completion: nil)
+                completionHandler(res: true)
             } else {
                 println("Uh oh. The user cancelled the Facebook login.")
-                let alertController = UIAlertController(title: "Alert", message:
-                    "Failed! Please log in again!", preferredStyle: UIAlertControllerStyle.Alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-                loginView.presentViewController(alertController, animated: true, completion: nil)
+                completionHandler(res: false)
             }
         })
     }
