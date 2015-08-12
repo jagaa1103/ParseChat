@@ -9,8 +9,8 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ParseChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="cj9-52-wXy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ogl-d3-khP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -46,18 +46,21 @@
             <objects>
                 <viewController storyboardIdentifier="LoginView" id="i2e-K8-pAB" customClass="LoginView" customModule="ParseChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kDS-WC-EwC"/>
-                        <viewControllerLayoutGuide type="bottom" id="nNZ-Td-Ha7"/>
+                        <viewControllerLayoutGuide type="top" id="m5o-mM-jFn"/>
+                        <viewControllerLayoutGuide type="bottom" id="8pC-Cx-YCS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nBw-gn-Afs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ni-Xq-g8V">
-                                <rect key="frame" x="137" y="352" width="38" height="30"/>
-                                <state key="normal" title="Login">
+                                <rect key="frame" x="105" y="317" width="111" height="31"/>
+                                <state key="normal" title="Facebook Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookLoginClicked:" destination="i2e-K8-pAB" eventType="touchUpInside" id="4DZ-MT-SMm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

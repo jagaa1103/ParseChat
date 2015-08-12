@@ -10,26 +10,27 @@ import UIKit
 import Parse
 
 class ViewController: UIViewController {
-
+    
+    let loginService = LoginService()
+    
     @IBOutlet weak var insertField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        var query = PFQuery(className:"chats")
-        query.getObjectInBackgroundWithId("DyoIuZH8Tb") {
-            (names: PFObject?, error: NSError?) -> Void in
-            if error == nil && names != nil {
-                println(names)
-            } else {
-                println(error)
-            }
-        }
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if(loginService.checkLogin() == true){
+            
+        }else{
+            let loginView:LoginView = self.storyboard!.instantiateViewControllerWithIdentifier("LoginView") as! LoginView
+            self.presentViewController(loginView, animated: true, completion: nil)
+        }
     }
 
     @IBAction func insertBtnClicked(sender: AnyObject) {

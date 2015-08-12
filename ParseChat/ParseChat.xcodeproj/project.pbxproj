@@ -29,6 +29,10 @@
 		1106A8011B77029600716FF0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1106A8001B77029600716FF0 /* SystemConfiguration.framework */; };
 		1106A8031B7702A000716FF0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1106A8021B7702A000716FF0 /* libz.dylib */; };
 		1106A8051B7702B000716FF0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1106A8041B7702B000716FF0 /* libsqlite3.dylib */; };
+		110CC17F1B7AE8FF00C02282 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CC17E1B7AE8FF00C02282 /* LoginService.swift */; };
+		110CC1851B7AF3DC00C02282 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110CC1821B7AF3DC00C02282 /* FBSDKCoreKit.framework */; };
+		110CC1861B7AF3DC00C02282 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110CC1831B7AF3DC00C02282 /* FBSDKLoginKit.framework */; };
+		110CC1871B7AF3DC00C02282 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110CC1841B7AF3DC00C02282 /* FBSDKShareKit.framework */; };
 		11C857BA1B78D09D0028A63F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C857B91B78D09D0028A63F /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +73,11 @@
 		1106A8001B77029600716FF0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1106A8021B7702A000716FF0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1106A8041B7702B000716FF0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		110CC17E1B7AE8FF00C02282 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		110CC1821B7AF3DC00C02282 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		110CC1831B7AF3DC00C02282 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		110CC1841B7AF3DC00C02282 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		110CC1881B7AFFC000C02282 /* ParseChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseChat-Bridging-Header.h"; sourceTree = "<group>"; };
 		11C857B91B78D09D0028A63F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +88,8 @@
 			files = (
 				1106A8051B7702B000716FF0 /* libsqlite3.dylib in Frameworks */,
 				1106A8031B7702A000716FF0 /* libz.dylib in Frameworks */,
+				110CC1861B7AF3DC00C02282 /* FBSDKLoginKit.framework in Frameworks */,
+				110CC1851B7AF3DC00C02282 /* FBSDKCoreKit.framework in Frameworks */,
 				1106A8011B77029600716FF0 /* SystemConfiguration.framework in Frameworks */,
 				1106A7FF1B77028A00716FF0 /* StoreKit.framework in Frameworks */,
 				1106A7FD1B77028200716FF0 /* Security.framework in Frameworks */,
@@ -87,6 +98,7 @@
 				1106A7F71B77025E00716FF0 /* CFNetwork.framework in Frameworks */,
 				1106A7F51B77025500716FF0 /* AudioToolbox.framework in Frameworks */,
 				1106A7E71B76FF2700716FF0 /* CoreLocation.framework in Frameworks */,
+				110CC1871B7AF3DC00C02282 /* FBSDKShareKit.framework in Frameworks */,
 				1106A7EF1B76FF3B00716FF0 /* Parse.framework in Frameworks */,
 				1106A7F31B76FF3B00716FF0 /* ParseUI.framework in Frameworks */,
 				1106A7F21B76FF3B00716FF0 /* ParseFacebookUtilsV4.framework in Frameworks */,
@@ -109,7 +121,8 @@
 		1106A7B51B76FDCF00716FF0 = {
 			isa = PBXGroup;
 			children = (
-				1106A7E61B76FF0E00716FF0 /* frameworks */,
+				110CC1881B7AFFC000C02282 /* ParseChat-Bridging-Header.h */,
+				1106A7E61B76FF0E00716FF0 /* SDKs */,
 				1106A7C01B76FDCF00716FF0 /* ParseChat */,
 				1106A7D61B76FDD000716FF0 /* ParseChatTests */,
 				1106A7BF1B76FDCF00716FF0 /* Products */,
@@ -128,13 +141,13 @@
 		1106A7C01B76FDCF00716FF0 /* ParseChat */ = {
 			isa = PBXGroup;
 			children = (
+				110CC1801B7AEAAC00C02282 /* Login */,
 				1106A7C31B76FDCF00716FF0 /* AppDelegate.swift */,
 				1106A7C51B76FDCF00716FF0 /* ViewController.swift */,
 				1106A7C71B76FDCF00716FF0 /* Main.storyboard */,
 				1106A7CA1B76FDD000716FF0 /* Images.xcassets */,
 				1106A7CC1B76FDD000716FF0 /* LaunchScreen.xib */,
 				1106A7C11B76FDCF00716FF0 /* Supporting Files */,
-				11C857B91B78D09D0028A63F /* LoginView.swift */,
 			);
 			path = ParseChat;
 			sourceTree = "<group>";
@@ -164,9 +177,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1106A7E61B76FF0E00716FF0 /* frameworks */ = {
+		1106A7E61B76FF0E00716FF0 /* SDKs */ = {
 			isa = PBXGroup;
 			children = (
+				110CC1821B7AF3DC00C02282 /* FBSDKCoreKit.framework */,
+				110CC1831B7AF3DC00C02282 /* FBSDKLoginKit.framework */,
+				110CC1841B7AF3DC00C02282 /* FBSDKShareKit.framework */,
 				1106A8041B7702B000716FF0 /* libsqlite3.dylib */,
 				1106A8021B7702A000716FF0 /* libz.dylib */,
 				1106A8001B77029600716FF0 /* SystemConfiguration.framework */,
@@ -184,7 +200,16 @@
 				1106A7ED1B76FF3B00716FF0 /* ParseUI.framework */,
 				1106A7E41B76FF0600716FF0 /* CoreLocation.framework */,
 			);
-			name = frameworks;
+			name = SDKs;
+			sourceTree = "<group>";
+		};
+		110CC1801B7AEAAC00C02282 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				11C857B91B78D09D0028A63F /* LoginView.swift */,
+				110CC17E1B7AE8FF00C02282 /* LoginService.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +315,7 @@
 				11C857BA1B78D09D0028A63F /* LoginView.swift in Sources */,
 				1106A7C61B76FDCF00716FF0 /* ViewController.swift in Sources */,
 				1106A7C41B76FDCF00716FF0 /* AppDelegate.swift in Sources */,
+				110CC17F1B7AE8FF00C02282 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +449,7 @@
 				INFOPLIST_FILE = ParseChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ParseChat-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -437,6 +464,7 @@
 				INFOPLIST_FILE = ParseChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ParseChat-Bridging-Header.h";
 			};
 			name = Release;
 		};
