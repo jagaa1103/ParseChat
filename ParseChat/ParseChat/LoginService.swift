@@ -7,12 +7,51 @@
 //
 
 import Foundation
-
+import Parse
 
 class LoginService {
+    
+    class var sharedInstance: LoginService {
+        struct Static {
+            static var instance: LoginService?
+        }
+        if (Static.instance == nil) {
+            Static.instance = LoginService()
+        }
+        return Static.instance!
+    }
+
+    
     func checkLogin()->Bool{
-        return false
+        if(PFUser.currentUser() != nil){
+            return true
+        }else{
+            return false
+        }
     }
     
+    
+    func loginWithFacebook(loginView: LoginView) {
+        var flag: Bool = false
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(["email", "public_profile"], block:{
+            (user: PFUser?, error: NSError?) -> Void in
+            if(error != nil){
+                println("Error: \(error)")
+            }
+            if let user = user {
+                if user.isNew {
+                    println("User signed up and logged in through Facebook!")
+                } else {
+                    println("User logged in through Facebook!")
+                }
+                println(user)
+                println(FBSDKAccessToken.currentAccessToken().tokenString)
+                let mainView:MainView = loginView.storyboard!.instantiateViewControllerWithIdentifier("MainView") as! MainView
+                    loginView.presentViewController(mainView, animated: true, completion: nil)
+            } else {
+                println("Uh oh. The user cancelled the Facebook login.")
+            }
+        })
+    }
     
 }
