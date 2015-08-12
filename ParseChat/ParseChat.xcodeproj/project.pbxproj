@@ -34,6 +34,7 @@
 		110CC1861B7AF3DC00C02282 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110CC1831B7AF3DC00C02282 /* FBSDKLoginKit.framework */; };
 		110CC1871B7AF3DC00C02282 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110CC1841B7AF3DC00C02282 /* FBSDKShareKit.framework */; };
 		110CC18C1B7B29A400C02282 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CC18B1B7B29A400C02282 /* StartView.swift */; };
+		11C7AF7A1B7B2FD400F60ECC /* images in Resources */ = {isa = PBXBuildFile; fileRef = 11C7AF791B7B2FD400F60ECC /* images */; };
 		11C857BA1B78D09D0028A63F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C857B91B78D09D0028A63F /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		110CC1841B7AF3DC00C02282 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		110CC1881B7AFFC000C02282 /* ParseChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseChat-Bridging-Header.h"; sourceTree = "<group>"; };
 		110CC18B1B7B29A400C02282 /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		11C7AF791B7B2FD400F60ECC /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		11C857B91B78D09D0028A63F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +153,7 @@
 				1106A7CC1B76FDD000716FF0 /* LaunchScreen.xib */,
 				1106A7C11B76FDCF00716FF0 /* Supporting Files */,
 				110CC18B1B7B29A400C02282 /* StartView.swift */,
+				11C7AF791B7B2FD400F60ECC /* images */,
 			);
 			path = ParseChat;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C7AF7A1B7B2FD400F60ECC /* images in Resources */,
 				1106A7C91B76FDCF00716FF0 /* Main.storyboard in Resources */,
 				1106A7CE1B76FDD000716FF0 /* LaunchScreen.xib in Resources */,
 				1106A7CB1B76FDD000716FF0 /* Images.xcassets in Resources */,

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FA56C93F-76F0-4074-9E0A-2A6436C81619</string>
 	<key>IDESourceControlProjectName</key>
-	<string>ParseChat</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>87BAA33BAF859B8695587B569DDFBE9B15EA8402</key>
 		<string>https://github.com/jagaa1103/ParseChat.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ParseChat/ParseChat.xcodeproj</string>
+	<string>ParseChat/ParseChat.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>87BAA33BAF859B8695587B569DDFBE9B15EA8402</key>

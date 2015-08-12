@@ -50,6 +50,10 @@ class LoginService {
                     loginView.presentViewController(mainView, animated: true, completion: nil)
             } else {
                 println("Uh oh. The user cancelled the Facebook login.")
+                let alertController = UIAlertController(title: "Alert", message:
+                    "Failed! Please log in again!", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                loginView.presentViewController(alertController, animated: true, completion: nil)
             }
         })
     }
